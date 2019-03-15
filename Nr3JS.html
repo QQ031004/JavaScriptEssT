@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My3thJS</title>
+<style>
+#div1 {width:200px; height:200px; background: pink;}
+</style>
+<script>
+    //Från Nr2 förenklar till Nr3, med samma efekt
+
+    function toGrey()
+    {
+        document.getElementById('div1').style.width='300px';
+        document.getElementById('div1').style.height='300px';
+        document.getElementById('div1').style.background='grey';
+    }
+    
+    function toPink()
+    {
+        document.getElementById('div1').style.width='200px';
+        document.getElementById('div1').style.height='200px';
+        document.getElementById('div1').style.background='pink';
+    }
+    </script>
+    </head>
+
+     <body>
+        <div id="div1" onmouseover="toGrey()" onmouseout="toPink()">
+        </div>
+     </body>
+        </html>
