@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MyJSNr6</title>
+<style>
+#div1 {width:80px; height:80px; background: pink;}
+</style>
+<script>
+
+    /*function toGrey()
+      {
+        var oDiv=document.getElementById('div1')
+        oDiv.style.background='grey'  
+        }
+    function toGreen()
+      {
+        var oDiv=document.getElementById('div1')
+        oDiv.style.background='green'  
+        }
+    function toOrange()
+      {
+        var oDiv=document.getElementById('div1')
+        oDiv.style.background='orange'  
+        }
+    function toSilver()
+      {
+        var oDiv=document.getElementById('div1')
+        oDiv.style.background='silver'  
+        }
+
+    function toYellow()
+      {
+        var oDiv=document.getElementById('div1')
+        oDiv.style.background='yellow'  
+        } */
+// Allt ovan kan förenklas till:
+
+        function setColor(color)
+        {
+            var oDiv=document.getElementById('div1')
+            oDiv.style.background=color;
+        }
+        
+    </script>
+    </head>
+
+    <body>
+        <!--sedan ändras onclick="toGrey()" till "setColor..." istället-->
+
+       <!--Exempel: <input type="button" value="toGrey" 
+        onclick="toGrey()"" /> blir:--> 
+
+        <input type="button" value="toGrey" 
+        onclick="setColor('grey')" />
+
+        <input type="button" value="toGreen"
+        onclick="setColor('green')" />
+
+        <input type="button" value="toOrange"
+        onclick="setColor('orange')" />
+
+        <input type="button" value="toSilver"
+        onclick="setcolor('silver')" />
+
+        <input type="button" value="toYellow"
+        onclick="setColor('yellow')" />
+
+        <div id="div1">
+        </div>
+</body>
+</html>        
+        
