@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"
+<title></title>
+<style>
+div {width:200px; height:200px; float:left; border:5px solid grey; margin:10px;}
+</style>
+<script>
+    window.onload=function ()
+    {
+    var aDiv=document.getElementsByTagName('div');   // aDiv innebär att det är många div osv
+    
+    //alert(aDiv.length);                            // Det här är för en div bara,
+    //aDiv.style.background='pink';                  // därför fungerar inte med det här.
+                                                    
+    //for(var i=0;i<4;i++)                          //om det blir 8 div ändras 4 till 8, osv
+                             
+    {                                               // Men om det blir ibland 4 och ibland 8 div, hur görs då?
+        for(var i=0;i<aDiv.length;i++)             // Därför gör vi så här istället att det blir:
+        //i->0,1,2,3                               //  i=0;i<aDiv.length;i++                 
+        aDiv[i].style.background='pink'            //Då behövs ändras antal div i body bara.
+    }
+    
+    /* Allt det här kan kodas som ovan istället
+    aDiv[0].style.background='pink'
+    aDiv[1].style.background='pink'
+    aDiv[2].style.background='pink'
+    aDiv[3].style.background='pink'
+    */
+
+    };
+
+    </script>  
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div  
+</body>
+</html>

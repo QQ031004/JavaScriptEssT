@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MyJSnr7</title>
+<style>
+#div1 {width:100px; height:100px; background: pink;}
+</style>
+<script>
+   /* function toWidth()
+       {
+        var oDiv=document.getElementById('div1');
+        oDiv.style.width='300px';
+        }
+    function toHeight()
+     {
+        var oDiv=document.getElementById('div1');
+        oDiv.style.height='300px';
+     }
+     function toBlack()
+     {
+        var oDiv=document.getElementById('div1');
+        oDiv.style.background='black';
+     } */
+// obs! se även JSnr7(1)
+
+// Allt ovan kan kodas förenklad så här:
+function setStyle(name, value)
+ {
+var oDiv=document.getElementById('div1')
+oDiv.style[name]=value;
+ }
+</script>
+</head>
+
+     <!-- Tillhör ovan långa funtion
+         <body>
+       <input type="button" value="toWidth" 
+        onclick="toWidth()" />
+
+        <input type="button" value="toHeight"
+        onclick="toHeight()" />
+
+        <input type="button" value="toBlack"
+        onclick="toBlack()" /> 
+       </body>-->
+
+        <body>
+        <input type="button" value="toWidth" onclick="setStyle('width', '300px')" />
+        <input type="button" value="toHeight" onclick="setStyle('height', '300px')" />
+        <input type="button" value="toBlack" onclick="setStyle('background', 'black')" />
+
+        <div id="div1">    
+        </div>
+        </body>
+        </html>
+

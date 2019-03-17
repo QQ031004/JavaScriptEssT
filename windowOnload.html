@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"
+<title><WindowOnload</title>
+
+<script>
+    window.onload=function ()
+    {
+    var oBtn=document.getElementById('btn1');
+
+    oBtn.onclick=function ()
+    {
+        alert('Hej!');
+    };
+};
+    </script>  
+</head>
+
+<body>
+    <input id="btn1" type="button" value="" />
+    
+</body>
+</html>
+
+
+<!--
+  1. i JS måste inte varje function ha ett namn då kodas: function ()
+     Till exempel: value=""
+  2. Det brukas inte ha <script> i body
+  3. Om <script> är inte i body då hittas inte Browsers 'btn1' 
+     och då kommer upp felmeddelande 
+     därför använs window.onload=function (), ifallet.
+     se oven exempel
+-->

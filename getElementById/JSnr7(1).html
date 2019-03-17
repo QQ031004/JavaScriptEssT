@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Nr7(1)</title>
+<style>
+#div1 {width:100px; height:100px; background: pink;}
+</style>
+<script>
+function setText(name)
+ {
+    var oTxt=document.getElementById('tex1');
+
+    // 2 sätt att koda "name"
+
+    //Nr1:använs '.', exempel:
+    oTxt.value='abcdefg';
+
+    //Nr2:använs '[]' exempel:
+    //oTxt[name]='abcdefg';
+
+    /*var a='value';
+    oTxt[a]='abcdefg';*/
+    /* Oftast räcker det (och mycket enklare) att använda Nr1 med '.'.
+       Alla med "." kan ändras till [] men, alla[]kan ej använda "."istället. */
+
+  }
+ </script>
+ </head>
+ <body>
+<input id="tex1" type="text" />
+<input type="button" value="Text" onclick="setText('value')" />
+ </body>
+ </html>

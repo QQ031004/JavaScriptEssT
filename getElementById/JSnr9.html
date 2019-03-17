@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"
+<title>Style&ClassName</title>
+<style>
+#div1 {width:200px; height:100px; border:5px solid rgb(233, 44, 217);}
+.box {background:gold;}
+</style>
+<script>
+    // 1.Style jiaYangShi Hangjian
+    // 2. Style QuYangShi HangJian
+function toGold()
+{
+var oDiv=document.getElementById('div1');
+
+//oDiv.style.background='gold';
+oDiv.className='box';
+// alert(oDiv.style.background); PS: Den här tillhör följande gröna body
+}
+
+function toBlue()
+{
+    var oDiv=document.getElementById('div1');
+    oDiv.style.background='blue';
+}
+
+</script>
+</head>
+<body>
+    <input type="button" value="toGold" onclick="toGold()" />
+    <input type="button" value="toBlue" onclick="toBlue()" /> 
+    <div id="div1">
+           <!-- <div id="div1" style="background:red;">-->
+
+    </div>
+</body>
+</html>
+
+<!--För att undvika förvirringar, blandas/använs inte dåde style o class på samma t ex div.
+Det vill säga:
+Om det använs style på en t ex Div, då använs bara style, hela vägen.
+Om det använs class på en div från början då använs bara class, hela vägen.
+ Se exempel på rad: 8, 18, 22-26, 32. Där blandades både style o className, 
+ det resuterades till att det inte
+ kunde ändras från blue till gold om man klickde gold först. 
+ För att style är "(större)bestämmer" över class.
+ Man kan säga att: 样式优先级排序是:  * < 标签div < class/className < id < style(行间)
+-->
