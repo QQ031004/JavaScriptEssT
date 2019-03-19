@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>using Active & This</title>
+<style>
+#div1 .active {background: rgb(229, 154, 248);}
+#div1 div {width:200px; height:200px; 
+           background:goldenrod; 
+           border:5px solid lightgray; display:none;}
+</style>
+<script>
+    window.onload=function()
+    {
+        var oDiv=document.getElementById('div1');
+        var aBtn=oDiv.getElementsByTagName('input');
+        var aDiv=oDiv.getElementsByTagName('div');
+
+        for(var i=0;i<aBtn.length;i++)
+         {
+            aBtn[i].index=i;
+            aBtn[i].onclick=function ()
+             {
+                for(var i=0;i<aBtn.length;i++)
+                {
+                aBtn[i].className='';
+                aDiv[i].style.display='none';
+                }
+                  //alert(this.value);
+                 //alert(this.index)
+                  this.className='active';
+                  aDiv[this.index].style.display='block';
+              };
+          }
+     };
+
+</script>
+</head>
+
+<body>
+    <div id="div1">
+        <input class="active" type="button" value="Magnus" />      
+        <input type="button" value="Bella" />
+        <input type="button" value="Edwin" />
+        <input type="button" value="Jag" />
+        <div style="display:block;">Pappa</div>
+        <div>MinFlicka</div>
+        <div>MinPojke</div>
+        <div>Mamma</div>
+    </div>
+</body>
+</html>
+
+<!-- <input class="active" type="button" value="Madnus" index="0" /> -->
+<!--OBS! 'index' är inte standard funktion i html därför kan inte visas i
+  standard browser via html.  -->
+  <!-- Men det kan visas bra om det kodas i JS istället
+    se ovan:aBtn[i].index=i; 
+       sedan:aDiv[this.index].style.display='block';-->
