@@ -1,0 +1,30 @@
+/* Layout */
+.calendar{
+        margin:0px auto;
+        width:600px;
+        height:700;
+        border:1px solid #cccccc
+        }
+.calendar ul{
+        margin:5px auto;
+        width:500px;
+        height:500px;
+        border:1px solid black;
+        list-style:none;
+         }
+Body{
+        background: whitesmoke;
+        font-family: arial;
+         }     
+.calendar ul li{
+        display:block;
+        width:100px;
+        height:100px;
+        margin:10px;
+        background-color: palevioletred;
+        float:left;
+        text-align:center;
+          }    
+.calendar ul .active{
+         background-color: white;
+          }       
