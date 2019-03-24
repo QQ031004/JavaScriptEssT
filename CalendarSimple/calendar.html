@@ -3,9 +3,42 @@
 <head>
 <meta charset="utf-8">
 <title>Årskalender</title> 
- <link rel="stylesheet" href="calendar-style.css" type="text/css" media="all">
+ <style>
+.calendar{
+    margin:0px auto;
+    width:600px;
+    height:700;
+    border:3px solid #cccccc
+    }
+.calendar ul{
+    margin:5px auto;
+    width:500px;
+    height:600px;
+    background-color: black;
+    border:3px solid rgb(241, 236, 236);
+    list-style:none;
+     }
+/*Body{
+    background: black;
+    font-family: arial;
+     }  */   
+.calendar ul li{
+    display:block;
+    width:120px;
+    height:120px;  
+    margin:8px;
+    background-color: palevioletred;
+    float:left;
+    text-align:center;
+      }    
+.calendar ul .active{
+     background-color: white;
+      }       
 
-    <script>
+</style>
+
+<script>
+
     window.onload=function ()
         {
     var arr=[
@@ -24,20 +57,21 @@
           ];
          
     var oDiv=document.getElementById('tab');
-    var aLi=document.getElementsByTagName('li');
-    var oTxt=oDiv1.document.getElementsByTagName('div') //[0]; //om man är lat 
+    var aLi=oDiv.getElementsByTagName('li');
+    var oTxt=oDiv.getElementsByTagName('div')[0];
 
     for(var i=0;i<aLi.length;i++)
-    {
-        aLi[i].onmouseover=function ()
+     {
+        aLi[i].index=i;
+        aLi[i].onmouseover=function()
         {
            for(var i=0;i<aLi.length;i++)
            {
             aLi[i].className='';
-           }; 
+           }
            this.className='active';
-
-       oTxt.innerHTML="<h2>"+(this.index+1)+"Event</h2><p>"+arr[this.index]+"</p>";         
+       oTxt.innerHTML="<h2>"+(this.index+1)+" Event</h2><p>"+arr[this.index]+"</p>";       
+         
             };
     }
 };
