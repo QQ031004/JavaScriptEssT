@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>OlikaExepelPåTypeof</title>
+<script>
+var a=12;
+//alert(typeof a);          //blev Number
+
+a='abcdsif'; 
+//alert(typeof a);           //blev String
+
+a=true;
+//alert(typeof a);            //blev Boolean. OBS true är utan ''
+
+a=function ()
+{
+    alert('avjfh');
+};
+//alert(typeof a);             //blev Function
+
+a=document;
+//alert(typeof a);                // blev Object
+
+var b;
+alert(typeof b);                    // blev Undefined OBS! efter b kom direkt; 
+                                    // utan att döpa b=xxx därför blev undefined   
+
+
+// Tips till mig själv :-): om tänks att a=alfabet från början då är det bra att använda afabet hela tiden,
+//alltså att inte iblan använs siffor såsom a=12 (om inte måste)  ibland använs aftabeta, 
+//då är det lätt att man till slut blir 
+//förrvirad utan att man ens själv förstår.
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
